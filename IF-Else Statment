@@ -1,0 +1,19 @@
+class Solution {
+public:
+    void studentGrade(int marks) {
+       string Grade;
+       if(marks>=90)
+        Grade = "Grade A";
+       else if(marks>=70)
+       Grade = "Grade B";
+       else if(marks>=50)
+       Grade = "Grade C";
+       else if(marks>=35)
+       Grade = "Grade D";
+       else{
+        cout<<"Fail";
+        return;
+       }     
+        cout<<Grade;
+    }
+};
