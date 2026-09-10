@@ -1,0 +1,15 @@
+class Solution{
+public:
+   
+    void reverse(vector<int>& arr){
+        int n = arr.size();
+         
+         for(int i=0 ; i < n/2 ; i++){
+              int s = arr[i];
+              int l =  arr[n-i-1];
+              arr[i] = l;
+              arr[n-i-1]=s;
+         }
+        
+    }
+};
