@@ -1,0 +1,17 @@
+class Solution {
+    public:
+    int whileLoop(int d) {
+        // Your code goes here  
+      int count = 1;
+       int sum = 0;
+       if(d==0)
+         d=10;
+      while(count<=50){
+          sum = sum + d;
+           d = d+10;
+           count ++;
+      }
+       return sum ;
+
+    }
+};
