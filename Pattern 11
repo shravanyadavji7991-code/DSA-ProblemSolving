@@ -1,0 +1,35 @@
+class Solution {
+    public void pattern11(int n) {
+        int p = 1;
+       for(int i = 1 ; i<=n ; i++){
+          if(i%2==0)
+           p=0;
+           else 
+           p=1;
+         for(int j = 1 ; j<=i ; j++ ){
+            
+           System.out.print(p+" ");
+            if(p==1)
+                p =0;
+            else 
+             p=1;    
+         }
+          System.out.println();
+       }
+    }
+}
+
+/// Second Approach   
+class Solution {
+    public void pattern11(int n) {
+
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print((i + j + 1) % 2 + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
