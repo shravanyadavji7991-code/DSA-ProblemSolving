@@ -1,0 +1,25 @@
+class Solution {
+ 
+  public:
+      
+   int factorial(int d){
+            int ft = 1;
+              for(int i = 1 ; i<=d ; i++)
+                 ft = ft*i;
+             
+            return ft; 
+       }
+  
+  
+   int fact(int m){
+            if(m==0)
+             return 0;
+           int d = m%10;
+           return fact(m/10)+ factorial(d);
+       }
+  
+   bool isStrong(int n) {
+         int m = fact(n);
+         return n==m;
+       }
+};
