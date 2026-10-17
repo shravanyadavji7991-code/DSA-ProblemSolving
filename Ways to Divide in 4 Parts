@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int countWays(int n) {
+        int ans = 0;
+
+        for (int a = 1; a <= n; a++) {
+            for (int b = a; b <= n; b++) {
+                for (int c = b; c <= n; c++) {
+                    int d = n - a - b - c;
+
+                    if (d >= c) {
+                        ans++;
+                    }
+                }
+            }
+        }
+
+        return ans;
+    }
+};
