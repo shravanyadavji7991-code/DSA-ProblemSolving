@@ -1,0 +1,25 @@
+
+=========first way========
+class Solution {
+  public:
+    int factorial(int n) {
+        // code here
+        if(n==0)
+        return 1;
+        return factorial(n-1)*n;
+    }
+};
+==========second way=========
+class Solution {
+  public:
+    int factorial(int n) {
+        // code here
+        if (n==0)
+         return 1;
+        int   fact = 1;
+        for(int i =1 ; i<=n ; i++){
+            fact = fact*i;
+        }
+        return fact;
+    }
+};
