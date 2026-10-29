@@ -1,0 +1,30 @@
+
+class Solution {
+public:
+    vector<int> threeDivisors(vector<int>& query) {
+        vector<int> ans;
+
+        for (int q : query) {
+            int count = 0;
+
+            for (int i = 2; 1LL * i * i <= q; i++) {
+                bool prime = true;
+
+                for (int j = 2; 1LL * j * j <= i; j++) {
+                    if (i % j == 0) {
+                        prime = false;
+                        break;
+                    }
+                }
+
+                if (prime) {
+                    count++;
+                }
+            }
+
+            ans.push_back(count);
+        }
+
+        return ans;
+    }
+};
