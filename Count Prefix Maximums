@@ -1,0 +1,30 @@
+class Solution {
+  public:
+    int countElements(vector<int>& arr) {
+        // code here
+        
+        int n = arr.size();
+        if(n==0)
+          return 0;
+        if(n==1)
+          return 1;
+          
+        int c =1;
+        int max = arr[0];
+        
+        for(int i = 1 ; i < n ; i++){
+           
+             if(arr[i]>max){
+                c++;
+                max=arr[i];
+              }  
+           
+           
+            
+            else 
+              continue;
+        }
+        
+        return c;
+    }
+};
