@@ -1,0 +1,24 @@
+class Solution {
+  public:
+    int minValueToBalance(vector<int> &arr) {
+        // code here
+        int n=arr.size();
+        int ls =0;
+        int rs =0;
+        
+        for(int i = 0 ; i<n/2 ; i++ ){
+            ls += arr[i];
+        }
+        for(int i = n/2 ; i< n; i++ ){
+            rs += arr[i];
+        }
+        
+        int ans = ls - rs;
+        
+        if(ans<0)
+           ans =ans * -1;
+        
+        
+        return ans;
+    }
+};
