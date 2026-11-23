@@ -1,0 +1,15 @@
+class Solution {
+  public:
+    vector<int> reverseSubArray(vector<int> &arr, int l, int r) {
+        // code here
+        while(l<r){
+            int e = arr[r-1];
+            arr[r-1]=arr[l-1];
+            arr[l-1]=e;
+            l++;
+            r--;
+        }
+        
+        return arr;
+    }
+};
