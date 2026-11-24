@@ -1,0 +1,26 @@
+class Solution {
+  public:
+  
+   vector<int> reverse(vector<int> v , int l ,int r){
+       
+       while(l<r){
+           int e = v[r-1];
+            v[r-1] = v[l];
+            v[l] = e;
+            l++;
+            r--;
+       }
+       return v;
+   }
+  
+  
+    void rotateArr(vector<int>& arr, int d) {
+        // code here
+        int n = arr.size();
+        d = d%n;
+        
+        arr = reverse(arr,0,n);
+        arr = reverse(arr,0,n-d);
+        arr = reverse(arr,n-d , n);
+    }
+};
